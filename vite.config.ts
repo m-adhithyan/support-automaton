@@ -8,6 +8,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      '/test_zendesk': 'http://localhost:3000',
+      '/run_ai_reply': 'http://localhost:3000',
+      '/upload_document': 'http://localhost:3000',
+    }
   },
   plugins: [
     react(),
